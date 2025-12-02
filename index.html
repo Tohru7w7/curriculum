@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Joselin Cera Vega</title>
+    <!-- Carga de Tailwind CSS (URL corregida) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definición de la fuente Inter (URL corregida) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce7f3; /* Color de fondo ligero, similar al tema del CV */
+        }
+        /* Estilos específicos para la sección activa de la pestaña */
+        .tab-button.active {
+            @apply bg-rose-600 text-white shadow-lg;
+        }
+        .tab-button:hover:not(.active) {
+            @apply bg-rose-200;
+        }
+        .section-content {
+            display: none;
+        }
+        .section-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Contenedor Principal del CV/Portafolio -->
+    <div class="min-h-screen p-4 md:p-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+            
+            <!-- Encabezado y Perfil -->
+            <header class="p-8 bg-rose-100/70 border-b border-rose-200">
+                <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
+                    
+                    <!-- Contenedor para Imagen y Título/Subtítulo -->
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <!-- Foto de Perfil (Placeholder - Reemplaza esta URL con tu foto) -->
+                        <img 
+                            src="./img/img.jpeg" 
+                            alt="Foto de Perfil" 
+                            class="w-24 h-24 rounded-full object-cover mr-4 border-4 border-rose-300 shadow-md flex-shrink-0"
+                        >
+                        
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-extrabold text-rose-800">Joselin Cera Vega</h1>
+                            <p class="text-xl md:text-2xl font-light text-gray-700 mt-1">Estudiante de Ingeniería en Sistemas Computacionales</p>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Contacto (Visible siempre) -->
+                    <div class="mt-4 md:mt-0 text-sm text-gray-600 md:text-right flex-shrink-0">
+                        <p>📞 +52 636 112 1675</p>
+                        <p>📧 <a href="mailto:Joselinvegaa92@gmail.com" class="text-rose-600 hover:underline">joselinvega492@gmail.com</a></p>
+                        <p>📍 Cualquier lugar, México</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navegación de Pestañas (Tabs) -->
+            <nav class="p-4 bg-gray-50 border-b border-gray-200 sticky top-0 z-10">
+                <div class="flex flex-wrap justify-center space-x-2 md:space-x-4">
+                    <button class="tab-button active p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="perfil">Perfil</button>
+                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="experiencia">Experiencia</button>
+                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="formacion">Formación</button>
+                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="certificaciones">Certificaciones</button> <!-- NUEVO BOTÓN -->
+                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="habilidades">Habilidades</button>
+                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="proyectos">Proyectos</button>
+                </div>
+            </nav>
+
+            <!-- Contenido Principal de las Secciones -->
+            <main class="p-6 md:p-8">
+
+                <!-- 1. Sección PERFIL -->
+                <section id="perfil" class="section-content active">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Perfil Profesional</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico Superior de Nuevo Casas Grandes (2022-Actualidad).
+                        Cuento con conocimientos en desarrollo de software, bases de datos y redes. Apasionada por la tecnología y la resolución de problemas, con experiencia en programación en Java y JavaScript.
+                        Habilidad para trabajar en equipo, adaptarme a nuevos entornos y aprender rápidamente, interesada en oportunidades para aplicar mis conocimientos en proyectos innovadores y seguir creciendo en el ámbito tecnológico.
+                    </p>
+                </section>
+
+                <!-- 2. Sección EXPERIENCIA -->
+                <section id="experiencia" class="section-content">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Experiencia Laboral</h2>
+                    <div class="space-y-6">
+                        <!-- Experiencia 1: Paneles Solares -->
+                        <div class="border-l-4 border-rose-500 pl-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Elaboración de Constancias para Servicios de Paneles Solares</h3>
+                            <p class="text-sm text-gray-500">Actualidad</p>
+                            <p class="text-gray-700 mt-2">Actualmente, me encargo de la generación y gestión de constancias necesarias para los servicios de instalación y mantenimiento de paneles solares, asegurando el cumplimiento normativo.</p>
+                        </div>
+                        <!-- Experiencia 2: Empacadora Paquimé -->
+                        <div class="border-l-4 border-rose-500 pl-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Operadora y Control de Maquinaria en Empacadora Paquimé</h3>
+                            <p class="text-sm text-gray-500">2024 - 2025</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>**2024:** Realicé tareas de empaque de durazno y estuve a cargo de los controles de la maquinaria de empaque.</li>
+                                <li>**2025:** Enfoque exclusivo en el empaque de durazno, manteniendo la eficiencia y calidad del producto.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Sección FORMACIÓN -->
+                <section id="formacion" class="section-content">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Formación Académica</h2>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-rose-500 pl-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Ingeniería en Sistemas Computacionales</h3>
+                            <p class="text-gray-700">Instituto Tecnológico Superior de Nuevo Casas Grandes (ITSNCG)</p>
+                            <p class="text-sm text-gray-500">2022 - Actualidad</p>
+                        </div>
+                        <div class="border-l-4 border-rose-500 pl-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Preparatoria, Programación</h3>
+                            <p class="text-gray-700">Preparatoria Cetis93</p>
+                            <p class="text-sm text-gray-500">2019 - 2022</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Sección CERTIFICACIONES (NUEVA SECCIÓN) -->
+                <section id="certificaciones" class="section-content">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Certificaciones</h2>
+                    <div class="space-y-6">
+                        
+                        <!-- Certificado 1: CCNA -->
+                        <div class="border-l-4 border-rose-500 pl-4 bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                                <span class="mr-2 text-rose-500">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.007 12.007 0 002.944 12c0 3.048 1.077 5.864 3.047 8.618A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.047A12.007 12.007 0 0021.056 12a12.007 12.007 0 00-3.047-8.618z"></path></svg>
+                                </span>
+                                CCNA: Introducción a las redes
+                            </h3>
+                            <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Cubre los fundamentos de la arquitectura, seguridad, configuración y solución de problemas de redes para construir redes sencillas.</p>
+                            <p class="text-sm text-gray-500 mt-1">Institución: Instituto Tecnológico Superior de Nuevo Casas Grandes (06 May 2025)</p>
+                            <a href="./pdf/_certificate_22cg0157-itsncg-edu-mx_3a2bfd97-dd07-47bb-a775-c1ae3b90ef15 (1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
+                                Ver Certificado (PDF)
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+
+                        <!-- Certificado 2: Linux -->
+                        <div class="border-l-4 border-rose-500 pl-4 bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                                <span class="mr-2 text-rose-500">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.007 12.007 0 002.944 12c0 3.048 1.077 5.864 3.047 8.618A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.047A12.007 12.007 0 0021.056 12a12.007 12.007 0 00-3.047-8.618z"></path></svg>
+                                </span>
+                                NDG Linux Unhatched Spanish
+                            </h3>
+                            <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Introducción a los comandos básicos y la estructura de archivos del sistema operativo Linux, esencial para la administración de servidores.</p>
+                            <p class="text-sm text-gray-500 mt-1">Institución: Instituto Tecnológico Superior de Nuevo Casas Grandes (30 Abr 2025)</p>
+                            <a href="./pdf/Linux_Unhatched_certificate_22cg0157-itsncg-edu-mx_62143aeb-f85e-4b01-9d8b-4400c376d3f6 (1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
+                                Ver Certificado (PDF)
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- 5. Sección HABILIDADES -->
+                <section id="habilidades" class="section-content">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Habilidades e Idiomas</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Habilidades Clave</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> Trabajo en Equipo</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> Liderazgo</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> Buena Comunicación</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Conocimientos en JAVA**</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Conocimientos en Bases de Datos**</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Fundamentos de Redes (CCNA)**</li> <!-- Habilidad añadida por certificados -->
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Comandos Básicos de Linux**</li> <!-- Habilidad añadida por certificados -->
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Idiomas</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> Español (Nativo)</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> Inglés</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Sección PROYECTOS (Contenido Dinámico) -->
+                <section id="proyectos" class="section-content">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Proyectos Realizados</h2>
+                    <div id="projects-container" class="space-y-6">
+                        <!-- Aquí se cargarán los proyectos generados por la IA -->
+                           <img src="./img/img.jpeg" alt="">
+                        <div class="text-center py-12">
+                          
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica para manejar las pestañas (Tabs)
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const sections = document.querySelectorAll('.section-content');
+
+            // Asegura que el estado inicial de la primera pestaña sea correcto
+            document.getElementById('perfil').classList.add('active');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+
+                    // 1. Ocultar todas las secciones y desactivar botones
+                    sections.forEach(section => section.classList.remove('active'));
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // 2. Mostrar la sección objetivo y activar el botón
+                    document.getElementById(targetId).classList.add('active');
+                    button.classList.add('active');
+                });
+            });
+
+            // Lógica para generar y mostrar la sección de Proyectos usando la API de Gemini
+            
+            const projectsContainer = document.getElementById('projects-container');
+            const apiKey = ""; // La clave API será proporcionada automáticamente por el entorno
+            const model = "gemini-2.5-flash-preview-09-2025";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+            // Define el JSON Schema para asegurar una respuesta estructurada
+            const responseSchema = {
+                type: "ARRAY",
+                items: {
+                    type: "OBJECT",
+                    properties: {
+                        "titulo": { "type": "STRING", "description": "Título del proyecto." },
+                        "descripcion": { "type": "STRING", "description": "Descripción corta del proyecto." },
+                        "tecnologias": {
+                            "type": "ARRAY",
+                            "items": { "type": "STRING" },
+                            "description": "Lista de tecnologías clave utilizadas."
+                        }
+                    },
+                    "propertyOrdering": ["titulo", "descripcion", "tecnologias"]
+                }
+            };
+
+            const systemPrompt = "Actúa como un consultor de portafolios de ingeniería de software. Genera una lista de 3 proyectos simulados (mock projects) para un estudiante de Ingeniería en Sistemas Computacionales. Cada proyecto debe ser realista, tener un título, una descripción corta (1-2 oraciones) y las tecnologías clave utilizadas, incluyendo Java, JavaScript, Bases de Datos, y conceptos de Redes/Linux para complementar sus certificaciones. El resultado debe ser un array JSON. No añadas introducciones o explicaciones fuera del JSON.";
+            const userQuery = "Genera 3 proyectos de portafolio para un estudiante con conocimientos en Java, JavaScript, Bases de Datos, Redes y Linux.";
+            
+            async function fetchProjectsWithBackoff(retries = 5) {
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                    config: {
+                         responseMimeType: "application/json",
+                         responseSchema: responseSchema
+                    }
+                };
+                
+                for (let i = 0; i < retries; i++) {
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        
+                        if (response.ok) {
+                            const result = await response.json();
+                            if (result.candidates && result.candidates.length > 0 &&
+                                result.candidates[0].content && result.candidates[0].content.parts &&
+                                result.candidates[0].content.parts.length > 0) {
+                                
+                                const jsonText = result.candidates[0].content.parts[0].text;
+                                
+                                // FIX: Limpiar markdown fences si el modelo los añadió
+                                let cleanJsonText = jsonText.trim();
+                                if (cleanJsonText.startsWith("```json")) {
+                                    // Remover ````json` y la nueva línea
+                                    cleanJsonText = cleanJsonText.substring(cleanJsonText.indexOf('\n') + 1).trim();
+                                } else if (cleanJsonText.startsWith("```")) {
+                                    // Remover fences genéricos ````
+                                    cleanJsonText = cleanJsonText.substring(cleanJsonText.indexOf('\n') + 1).trim();
+                                }
+                                
+                                if (cleanJsonText.endsWith("```")) {
+                                    // Remover fence de cierre ````
+                                    cleanJsonText = cleanJsonText.substring(0, cleanJsonText.lastIndexOf('```')).trim();
+                                }
+                                
+                                return JSON.parse(cleanJsonText); // Parsear el texto limpio
+                            }
+                        } else if (response.status === 429 && i < retries - 1) {
+                            // Manejo de tasa límite (Rate Limit) con backoff exponencial
+                            const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            continue; // Reintentar
+                        }
+                        
+                        throw new Error(`API response error: ${response.statusText}`);
+                    } catch (error) {
+                        if (i === retries - 1) {
+                            console.error("Error al obtener los proyectos después de varios reintentos:", error);
+                            throw error;
+                        }
+                        // Continuar con el siguiente intento de backoff
+                    }
+                }
+                throw new Error("Fallo al obtener respuesta de la API después de todos los reintentos.");
+            }
+
+            function renderProjects(projects) {
+                // Limpiar el indicador de carga
+                projectsContainer.innerHTML = ''; 
+
+                if (!Array.isArray(projects) || projects.length === 0) {
+                    projectsContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los proyectos o el formato es incorrecto.</p>';
+                    return;
+                }
+
+                projects.forEach(project => {
+                    const projectDiv = document.createElement('div');
+                    projectDiv.className = 'border-l-4 border-rose-500 pl-4 bg-gray-50 p-4 rounded-lg shadow-sm transition duration-300 hover:shadow-lg hover:border-rose-700';
+                    
+                    const title = document.createElement('h3');
+                    title.className = 'text-xl font-semibold text-gray-900 flex items-center';
+                    
+                    // Icono SVG para el proyecto (añadiendo visual)
+                    // Este SVG usa un ícono de código/desarrollo
+                    const iconSvg = `<svg class="w-6 h-6 mr-3 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+                                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                     </svg>`; 
+                    
+                    title.innerHTML = iconSvg + (project.titulo || 'Proyecto sin Título');
+
+                    const description = document.createElement('p');
+                    description.className = 'text-gray-700 mt-2';
+                    description.textContent = project.descripcion || 'Sin descripción.';
+                    
+                    const techList = document.createElement('p');
+                    techList.className = 'text-sm text-gray-500 mt-3 font-medium';
+                    techList.innerHTML = 'Tecnologías: ' + (Array.isArray(project.tecnologias) ? project.tecnologias.join(', ') : (project.tecnologias || 'N/A'));
+                    
+                    projectDiv.appendChild(title);
+                    projectDiv.appendChild(description);
+                    projectDiv.appendChild(techList);
+                    
+                    projectsContainer.appendChild(projectDiv);
+                });
+            }
+
+            // Llamada principal para cargar los proyectos
+            fetchProjectsWithBackoff()
+                .then(renderProjects)
+                .catch(() => {
+                    // Mostrar un mensaje de error si falla la carga
+                    projectsContainer.innerHTML = '<img src="" alt="">';
+                });
+
+        });
+    </script>
+</body>
+</html>
