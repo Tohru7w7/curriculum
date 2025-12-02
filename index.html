@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Joselin Cera Vega</title>
-    <!-- Carga de Tailwind CSS (URL corregida) -->
+    <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Definición de la fuente Inter (URL corregida) */
+        /* Definición de la fuente Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #fce7f3; /* Color de fondo ligero, similar al tema del CV */
+            background-color: #fce7f3; /* Color de fondo ligero */
         }
         /* Estilos específicos para la sección activa de la pestaña */
         .tab-button.active {
@@ -48,11 +48,12 @@
                     
                     <!-- Contenedor para Imagen y Título/Subtítulo -->
                     <div class="flex items-center mb-4 md:mb-0">
-                        <!-- Foto de Perfil (Placeholder - Reemplaza esta URL con tu foto) -->
+                        <!-- Foto de Perfil -->
                         <img 
                             src="./img/img.jpeg" 
                             alt="Foto de Perfil" 
                             class="w-24 h-24 rounded-full object-cover mr-4 border-4 border-rose-300 shadow-md flex-shrink-0"
+                            onerror="this.src='https://placehold.co/100x100/f0d9e8/861e49?text=JC'"
                         >
                         
                         <div>
@@ -61,11 +62,11 @@
                         </div>
                     </div>
 
-                    <!-- Sección de Contacto (Visible siempre) -->
+                    <!-- Sección de Contacto -->
                     <div class="mt-4 md:mt-0 text-sm text-gray-600 md:text-right flex-shrink-0">
                         <p>📞 +52 636 112 1675</p>
                         <p>📧 <a href="mailto:Joselinvegaa92@gmail.com" class="text-rose-600 hover:underline">joselinvega492@gmail.com</a></p>
-                        <p>📍 Cualquier lugar, México</p>
+                        <p>📍 Nuevo Casas Grandes, Chihuahua, México</p>
                     </div>
                 </div>
             </header>
@@ -134,7 +135,7 @@
                     </div>
                 </section>
 
-                <!-- 4. Sección CERTIFICACIONES (NUEVA SECCIÓN) -->
+                <!-- 4. Sección CERTIFICACIONES -->
                 <section id="certificaciones" class="section-content">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Certificaciones</h2>
                     <div class="space-y-6">
@@ -143,16 +144,17 @@
                         <div class="border-l-4 border-rose-500 pl-4 bg-gray-50 p-4 rounded-lg shadow-sm">
                             <h3 class="text-xl font-semibold text-gray-800 flex items-center">
                                 <span class="mr-2 text-rose-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.007 12.007 0 002.944 12c0 3.048 1.077 5.864 3.047 8.618A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.047A12.007 12.007 0 0021.056 12a12.007 12.007 0 00-3.047-8.618z"></path></svg>
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.007 12.007 0 002.944 12c0 3.048 1.077 5.864 3.047 8.618A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.047A12.007 12.007 0 0021.056 12a12.007 12.007 0 00-3.047-8.618z"></path></svg>
                                 </span>
                                 CCNA: Introducción a las redes
                             </h3>
-                            <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Cubre los fundamentos de la arquitectura, seguridad, configuración y solución de problemas de redes para construir redes sencillas.</p>
+                            <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Cubre los fundamentos de la arquitectura, seguridad, configuración y solución de problemas de redes.</p>
                             <p class="text-sm text-gray-500 mt-1">Institución: Instituto Tecnológico Superior de Nuevo Casas Grandes (06 May 2025)</p>
-                            <!-- ENLACE ACTUALIZADO: Asume que CCNA.pdf está en la carpeta 'pdf' -->
-                            <a href="./pdf/_certificate_22cg0157-itsncg-edu-mx_3a2bfd97-dd07-47bb-a775-c1ae3b90ef15(1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
+                            
+                            <!-- NOTA: Renombra tu archivo PDF a 'CCNA.pdf' y ponlo en una carpeta 'pdf' para que funcione -->
+                            <a href="./pdf/CCNA.pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
                                 Ver Certificado (PDF)
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
                         </div>
 
@@ -160,16 +162,17 @@
                         <div class="border-l-4 border-rose-500 pl-4 bg-gray-50 p-4 rounded-lg shadow-sm">
                             <h3 class="text-xl font-semibold text-gray-800 flex items-center">
                                 <span class="mr-2 text-rose-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.007 12.007 0 002.944 12c0 3.048 1.077 5.864 3.047 8.618A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.047A12.007 12.007 0 0021.056 12a12.007 12.007 0 00-3.047-8.618z"></path></svg>
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.007 12.007 0 002.944 12c0 3.048 1.077 5.864 3.047 8.618A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.047A12.007 12.007 0 0021.056 12a12.007 12.007 0 00-3.047-8.618z"></path></svg>
                                 </span>
                                 NDG Linux Unhatched Spanish
                             </h3>
-                            <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Introducción a los comandos básicos y la estructura de archivos del sistema operativo Linux, esencial para la administración de servidores.</p>
+                            <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Introducción a los comandos básicos y la estructura de archivos del sistema operativo Linux.</p>
                             <p class="text-sm text-gray-500 mt-1">Institución: Instituto Tecnológico Superior de Nuevo Casas Grandes (30 Abr 2025)</p>
-                            <!-- ENLACE ACTUALIZADO: Asume que Linux.pdf está en la carpeta 'pdf' -->
-                            <a href="./pdf/Linux_Unhatched_certificate_22cg0157-itsncg-edu-mx_62143aeb-f85e-4b01-9d8b-4400c376d3f6 (1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
+                            
+                            <!-- NOTA: Renombra tu archivo PDF a 'Linux.pdf' y ponlo en una carpeta 'pdf' para que funcione -->
+                            <a href="./pdf/Linux.pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
                                 Ver Certificado (PDF)
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
                         </div>
 
@@ -188,8 +191,8 @@
                                 <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> Buena Comunicación</li>
                                 <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Conocimientos en JAVA**</li>
                                 <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Conocimientos en Bases de Datos**</li>
-                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Fundamentos de Redes (CCNA)**</li> <!-- Habilidad añadida por certificados -->
-                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Comandos Básicos de Linux**</li> <!-- Habilidad añadida por certificados -->
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Fundamentos de Redes (CCNA)**</li>
+                                <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> **Comandos Básicos de Linux**</li>
                             </ul>
                         </div>
                         <div>
@@ -202,10 +205,9 @@
                     </div>
                 </section>
 
-                <!-- 6. Sección PROYECTOS (Contenido Dinámico con Tarjetas Visuales) -->
+                <!-- 6. Sección PROYECTOS -->
                 <section id="proyectos" class="section-content">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Proyectos Realizados</h2>
-                    <!-- Contenedor con grid para mostrar proyectos en formato de tarjeta -->
                     <div id="projects-container" class="space-y-6">
                         <!-- Indicador de carga inicial -->
                         <div class="text-center py-12">
@@ -244,44 +246,67 @@
                 });
             });
 
+            // DATOS DE RESPALDO (MOCK DATA) - Se usan si la API falla
+            // ACTUALIZACIÓN: Se han añadido las imágenes subidas al primer proyecto
+            const fallbackProjects = [
+                {
+                    "titulo": "Tienda online",
+                    "descripcion": "Página donde se muestra una tienda, con su inicio, registro y login.",
+                    "tecnologias": ["Java", "MySQL"],
+                    // Se usa la primera imagen como principal de la tarjeta
+                    "imagen_url": "./img/inicio.png", 
+                    // Se añaden las rutas a las imágenes adicionales para este proyecto
+                    "imagenes_adicionales": [
+                        "./img/inicial.png",
+                        "./img/iniciosesion.png",
+                        "./img/registro.png"
+                    ]
+                },
+                {
+                    "titulo": "Enfermería",
+                    "descripcion": "Diseño de una página web para el departamento de enfemeria del ITSNCG, con control de inventario",
+                    "tecnologias": ["php", "html", "Dbeaver"],
+                    "imagen_url": "./img/1.png",
+                    "imagenes_adicionales": [
+                        "./img/2.png",
+                        "./img/3.png",
+                        "./img/5.png",
+                        "./img/6.png",
+                        "./img/7.png",
+                        "./img/8.png"
+                    ]
+                }
+            ];
+
             // Lógica para generar y mostrar la sección de Proyectos usando la API de Gemini
-            
             const projectsContainer = document.getElementById('projects-container');
             const apiKey = ""; // La clave API será proporcionada automáticamente por el entorno
             const model = "gemini-2.5-flash-preview-09-2025";
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
-            // Define el JSON Schema para asegurar una respuesta estructurada
             const responseSchema = {
                 type: "ARRAY",
                 items: {
                     type: "OBJECT",
                     properties: {
-                        "titulo": { "type": "STRING", "description": "Título del proyecto." },
-                        "descripcion": { "type": "STRING", "description": "Descripción corta del proyecto." },
-                        "tecnologias": {
-                            "type": "ARRAY",
-                            "items": { "type": "STRING" },
-                            "description": "Lista de tecnologías clave utilizadas."
-                        },
-                        "imagen_url": { "type": "STRING", "description": "URL de un placeholder de imagen temático (e.g., para un proyecto de base de datos usar placehold.co/400x200/db/fff?text=BD)." }
-                    },
-                    "propertyOrdering": ["titulo", "descripcion", "tecnologias", "imagen_url"]
+                        "titulo": { "type": "STRING" },
+                        "descripcion": { "type": "STRING" },
+                        "tecnologias": { type: "ARRAY", items: { type: "STRING" } },
+                        "imagen_url": { "type": "STRING" },
+                        // Añadimos el campo para imágenes adicionales en el esquema
+                        "imagenes_adicionales": { type: "ARRAY", items: { type: "STRING" } }
+                    }
                 }
             };
 
-            // FIX: Cambiar la query para solicitar solo 2 proyectos
-            const systemPrompt = "Actúa como un consultor de portafolios de ingeniería de software. Genera una lista de 2 proyectos simulados (mock projects) para un estudiante de Ingeniería en Sistemas Computacionales. Cada proyecto debe ser realista, tener un título, una descripción corta (1-2 oraciones) y las tecnologías clave utilizadas, incluyendo Java, JavaScript, Bases de Datos, y conceptos de Redes/Linux para complementar sus certificaciones. El resultado debe ser un array JSON. Incluye una URL de placeholder de imagen relevante para cada proyecto, usando el formato placehold.co/400x200/{color}/{text_color}?text={texto_tematico}. No añadas introducciones o explicaciones fuera del JSON.";
-            const userQuery = "Genera 2 proyectos de portafolio para un estudiante con conocimientos en Java, JavaScript, Bases de Datos, Redes y Linux.";
+            const systemPrompt = "Genera 2 proyectos realistas para un estudiante de Ingeniería en Sistemas (Java, BD, Redes). Devuelve JSON array.";
+            const userQuery = "Genera 2 proyectos.";
             
-            async function fetchProjectsWithBackoff(retries = 5) {
+            async function fetchProjectsWithBackoff(retries = 3) {
                 const payload = {
                     contents: [{ parts: [{ text: userQuery }] }],
                     systemInstruction: { parts: [{ text: systemPrompt }] },
-                    config: {
-                         responseMimeType: "application/json",
-                         responseSchema: responseSchema
-                    }
+                    config: { responseMimeType: "application/json", responseSchema: responseSchema }
                 };
                 
                 for (let i = 0; i < retries; i++) {
@@ -294,82 +319,60 @@
                         
                         if (response.ok) {
                             const result = await response.json();
-                            if (result.candidates && result.candidates.length > 0 &&
-                                result.candidates[0].content && result.candidates[0].content.parts &&
-                                result.candidates[0].content.parts.length > 0) {
-                                
-                                const jsonText = result.candidates[0].content.parts[0].text;
-                                
-                                // FIX: Limpieza más robusta de los fences de Markdown usando RegEx
-                                let cleanJsonText = jsonText.trim();
-                                // Remueve un fence de apertura opcional (```json o ```) seguido opcionalmente de un salto de línea
-                                cleanJsonText = cleanJsonText.replace(/^\s*```(json)?\s*\n?/i, '');
-                                // Remueve un fence de cierre opcional (```)
-                                cleanJsonText = cleanJsonText.replace(/\s*```\s*$/i, '');
-                                
-                                // Intenta parsear el texto limpio
+                            if (result.candidates?.[0]?.content?.parts?.[0]?.text) {
+                                const text = result.candidates[0].content.parts[0].text;
+                                // Intenta extraer el array JSON buscando los corchetes
+                                const jsonMatch = text.match(/\[[\s\S]*\]/);
+                                if (jsonMatch) {
+                                    return JSON.parse(jsonMatch[0]);
+                                }
+                                // Fallback a limpieza simple si no se encuentran corchetes claros
+                                let cleanJsonText = text.trim();
+                                cleanJsonText = cleanJsonText.replace(/^\s*```(json)?\s*\n?/i, '').replace(/\s*```\s*$/i, '');
                                 return JSON.parse(cleanJsonText); 
                             }
-                        } else if (response.status === 429 && i < retries - 1) {
-                            // Manejo de tasa límite (Rate Limit) con backoff exponencial
-                            const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
-                            await new Promise(resolve => setTimeout(resolve, delay));
-                            continue; // Reintentar
                         }
-                        
-                        throw new Error(`API response error: ${response.statusText}`);
                     } catch (error) {
-                        if (i === retries - 1) {
-                            console.error("Error al obtener los proyectos después de varios reintentos:", error);
-                            throw error;
-                        }
-                        // Continuar con el siguiente intento de backoff
+                        console.error("Intento fallido:", error);
                     }
+                    if (i < retries - 1) await new Promise(r => setTimeout(r, 1000));
                 }
-                throw new Error("Fallo al obtener respuesta de la API después de todos los reintentos.");
+                throw new Error("Fallo API");
             }
 
             function renderProjects(projects) {
-                // Limpiar el indicador de carga
                 projectsContainer.innerHTML = ''; 
-                // Asegura que el contenedor use grid para el layout de tarjetas
                 projectsContainer.classList.add('grid', 'md:grid-cols-2', 'lg:grid-cols-3');
 
-
                 if (!Array.isArray(projects) || projects.length === 0) {
-                    projectsContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los proyectos o el formato es incorrecto.</p>';
+                    // Si llega vacío por alguna razón, usamos fallback
+                    renderProjects(fallbackProjects); 
                     return;
                 }
                 
-                // Asegurar que solo renderice el número solicitado de proyectos (aunque la IA debería haber generado 2)
                 const projectsToRender = projects.slice(0, 2);
-
 
                 projectsToRender.forEach(project => {
                     const projectCard = document.createElement('div');
-                    // Estilo de tarjeta de proyecto con sombra, esquinas redondeadas y hover effect
-                    projectCard.className = 'bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.02] transform';
+                    projectCard.className = 'bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.02] transform flex flex-col';
                     
-                    // Imagen del proyecto (Placeholder)
+                    // Imagen Principal del Proyecto
                     const image = document.createElement('img');
-                    // FIX: Asegurar que la URL del placeholder no tenga problemas
-                    image.src = project.imagen_url || '[https://placehold.co/400x200/99f6e4/000?text=Proyecto](https://placehold.co/400x200/99f6e4/000?text=Proyecto)';
+                    image.src = project.imagen_url || 'https://placehold.co/400x200/99f6e4/000?text=Proyecto';
                     image.alt = `Imagen de proyecto ${project.titulo}`;
-                    image.className = 'w-full h-40 object-cover border-b-4 border-rose-500';
+                    image.className = 'w-full h-48 object-cover border-b-4 border-rose-500';
+                    // Añadir fallback para la imagen principal si falla
+                    image.onerror = function() {
+                        this.src = 'https://placehold.co/400x200/99f6e4/000?text=Proyecto';
+                    };
                     projectCard.appendChild(image);
                     
-                    // Contenido de la tarjeta
                     const contentDiv = document.createElement('div');
-                    contentDiv.className = 'p-5';
+                    contentDiv.className = 'p-5 flex-grow flex flex-col justify-between';
 
                     const title = document.createElement('h3');
                     title.className = 'text-xl font-bold text-rose-800 flex items-center mb-2';
-                    
-                    // Icono SVG para el proyecto
-                    const iconSvg = `<svg class="w-5 h-5 mr-2 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-                                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                                     </svg>`; 
-                    
+                    const iconSvg = `<svg class="w-5 h-5 mr-2 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>`; 
                     title.innerHTML = iconSvg + (project.titulo || 'Proyecto sin Título');
                     contentDiv.appendChild(title);
 
@@ -378,8 +381,42 @@
                     description.textContent = project.descripcion || 'Sin descripción.';
                     contentDiv.appendChild(description);
                     
+                    // Lógica para mostrar imágenes adicionales si existen
+                    if (project.imagenes_adicionales && project.imagenes_adicionales.length > 0) {
+                        const additionalImagesContainer = document.createElement('div');
+                        additionalImagesContainer.className = 'mt-4 mb-3';
+                        
+                        const imagesTitle = document.createElement('p');
+                        imagesTitle.className = 'text-xs font-semibold text-gray-600 mb-2';
+                        imagesTitle.textContent = 'Capturas del Proyecto:';
+                        additionalImagesContainer.appendChild(imagesTitle);
+                        
+                        const imagesGrid = document.createElement('div');
+                        imagesGrid.className = 'grid grid-cols-3 gap-2';
+                        
+                        // Mostramos hasta 3 imágenes adicionales
+                        project.imagenes_adicionales.slice(0, 3).forEach(imgUrl => {
+                            const smallImage = document.createElement('img');
+                            smallImage.src = imgUrl;
+                            smallImage.alt = 'Captura adicional';
+                            smallImage.className = 'w-full h-16 object-cover rounded-md border border-gray-200 cursor-pointer hover:opacity-75 transition duration-200';
+                            // Añadir fallback para imágenes adicionales
+                            smallImage.onerror = function() {
+                                this.src = 'https://placehold.co/100x100/e5e7eb/a3a3a3?text=N/A';
+                            };
+                            // Al hacer clic, se podría implementar una lógica para ver la imagen en grande (modal)
+                            smallImage.addEventListener('click', () => {
+                                window.open(imgUrl, '_blank');
+                            });
+                            imagesGrid.appendChild(smallImage);
+                        });
+                        
+                        additionalImagesContainer.appendChild(imagesGrid);
+                        contentDiv.appendChild(additionalImagesContainer);
+                    }
+
                     const techList = document.createElement('p');
-                    techList.className = 'text-xs font-semibold text-gray-500';
+                    techList.className = 'text-xs font-semibold text-gray-500 mt-auto pt-3 border-t border-gray-100';
                     techList.innerHTML = 'Tecnologías: <span class="text-rose-600">' + (Array.isArray(project.tecnologias) ? project.tecnologias.join(', ') : (project.tecnologias || 'N/A')) + '</span>';
                     contentDiv.appendChild(techList);
 
@@ -388,15 +425,13 @@
                 });
             }
 
-            // Llamada principal para cargar los proyectos
             fetchProjectsWithBackoff()
                 .then(renderProjects)
                 .catch(() => {
-                    // Mostrar un mensaje de error si falla la carga
-                    projectsContainer.innerHTML = '<p class="text-center text-red-500 py-12">Error al cargar proyectos. Intenta recargar la página.</p>';
-                    projectsContainer.classList.remove('grid', 'md:grid-cols-2', 'lg:grid-cols-3');
+                    // EN CASO DE ERROR: Usar los datos de respaldo (fallback)
+                    console.log("Usando proyectos de respaldo debido a error en API.");
+                    renderProjects(fallbackProjects);
                 });
-
         });
     </script>
 </body>
