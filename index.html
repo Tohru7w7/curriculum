@@ -27,6 +27,12 @@
         .section-content.active {
             display: block;
         }
+        /* Estilos para que el contenedor de proyectos se adapte */
+        #projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 1 columna en móvil, más en desktop */
+            gap: 24px;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -69,7 +75,7 @@
                     <button class="tab-button active p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="perfil">Perfil</button>
                     <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="experiencia">Experiencia</button>
                     <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="formacion">Formación</button>
-                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="certificaciones">Certificaciones</button> <!-- NUEVO BOTÓN -->
+                    <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="certificaciones">Certificaciones</button> 
                     <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="habilidades">Habilidades</button>
                     <button class="tab-button p-2 md:px-4 rounded-xl transition duration-200 text-sm md:text-base" data-target="proyectos">Proyectos</button>
                 </div>
@@ -142,7 +148,8 @@
                             </h3>
                             <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Cubre los fundamentos de la arquitectura, seguridad, configuración y solución de problemas de redes para construir redes sencillas.</p>
                             <p class="text-sm text-gray-500 mt-1">Institución: Instituto Tecnológico Superior de Nuevo Casas Grandes (06 May 2025)</p>
-                            <a href="./pdf/_certificate_22cg0157-itsncg-edu-mx_3a2bfd97-dd07-47bb-a775-c1ae3b90ef15 (1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
+                            <!-- ENLACE ACTUALIZADO: Asume que CCNA.pdf está en la carpeta 'pdf' -->
+                            <a href="./pdf/_certificate_22cg0157-itsncg-edu-mx_3a2bfd97-dd07-47bb-a775-c1ae3b90ef15(1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
                                 Ver Certificado (PDF)
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
@@ -158,6 +165,7 @@
                             </h3>
                             <p class="text-gray-700 mt-2">Certificado de Cisco Networking Academy. Introducción a los comandos básicos y la estructura de archivos del sistema operativo Linux, esencial para la administración de servidores.</p>
                             <p class="text-sm text-gray-500 mt-1">Institución: Instituto Tecnológico Superior de Nuevo Casas Grandes (30 Abr 2025)</p>
+                            <!-- ENLACE ACTUALIZADO: Asume que Linux.pdf está en la carpeta 'pdf' -->
                             <a href="./pdf/Linux_Unhatched_certificate_22cg0157-itsncg-edu-mx_62143aeb-f85e-4b01-9d8b-4400c376d3f6 (1).pdf" target="_blank" class="inline-flex items-center text-rose-600 hover:text-rose-800 transition duration-200 mt-2 text-sm font-medium">
                                 Ver Certificado (PDF)
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
@@ -193,14 +201,17 @@
                     </div>
                 </section>
 
-                <!-- 6. Sección PROYECTOS (Contenido Dinámico) -->
+                <!-- 6. Sección PROYECTOS (Contenido Dinámico con Tarjetas Visuales) -->
                 <section id="proyectos" class="section-content">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Proyectos Realizados</h2>
+                    <!-- Contenedor con grid para mostrar proyectos en formato de tarjeta -->
                     <div id="projects-container" class="space-y-6">
-                        <!-- Aquí se cargarán los proyectos generados por la IA -->
-                           <img src="./img/img.jpeg" alt="">
+                        <!-- Indicador de carga inicial -->
                         <div class="text-center py-12">
-                          
+                            <div id="loading-indicator" class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-rose-500 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
+                                <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Cargando proyectos...</span>
+                            </div>
+                            <p class="text-gray-500 mt-4">Generando ideas de proyectos para tu portafolio...</p>
                         </div>
                     </div>
                 </section>
@@ -251,13 +262,14 @@
                             "type": "ARRAY",
                             "items": { "type": "STRING" },
                             "description": "Lista de tecnologías clave utilizadas."
-                        }
+                        },
+                        "imagen_url": { "type": "STRING", "description": "URL de un placeholder de imagen temático (e.g., para un proyecto de base de datos usar placehold.co/400x200/db/fff?text=BD)." }
                     },
-                    "propertyOrdering": ["titulo", "descripcion", "tecnologias"]
+                    "propertyOrdering": ["titulo", "descripcion", "tecnologias", "imagen_url"]
                 }
             };
 
-            const systemPrompt = "Actúa como un consultor de portafolios de ingeniería de software. Genera una lista de 3 proyectos simulados (mock projects) para un estudiante de Ingeniería en Sistemas Computacionales. Cada proyecto debe ser realista, tener un título, una descripción corta (1-2 oraciones) y las tecnologías clave utilizadas, incluyendo Java, JavaScript, Bases de Datos, y conceptos de Redes/Linux para complementar sus certificaciones. El resultado debe ser un array JSON. No añadas introducciones o explicaciones fuera del JSON.";
+            const systemPrompt = "Actúa como un consultor de portafolios de ingeniería de software. Genera una lista de 3 proyectos simulados (mock projects) para un estudiante de Ingeniería en Sistemas Computacionales. Cada proyecto debe ser realista, tener un título, una descripción corta (1-2 oraciones) y las tecnologías clave utilizadas, incluyendo Java, JavaScript, Bases de Datos, y conceptos de Redes/Linux para complementar sus certificaciones. El resultado debe ser un array JSON. Incluye una URL de placeholder de imagen relevante para cada proyecto, usando el formato placehold.co/400x200/{color}/{text_color}?text={texto_tematico}. No añadas introducciones o explicaciones fuera del JSON.";
             const userQuery = "Genera 3 proyectos de portafolio para un estudiante con conocimientos en Java, JavaScript, Bases de Datos, Redes y Linux.";
             
             async function fetchProjectsWithBackoff(retries = 5) {
@@ -325,6 +337,8 @@
             function renderProjects(projects) {
                 // Limpiar el indicador de carga
                 projectsContainer.innerHTML = ''; 
+                projectsContainer.classList.add('grid', 'md:grid-cols-2', 'lg:grid-cols-3');
+
 
                 if (!Array.isArray(projects) || projects.length === 0) {
                     projectsContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los proyectos o el formato es incorrecto.</p>';
@@ -332,33 +346,44 @@
                 }
 
                 projects.forEach(project => {
-                    const projectDiv = document.createElement('div');
-                    projectDiv.className = 'border-l-4 border-rose-500 pl-4 bg-gray-50 p-4 rounded-lg shadow-sm transition duration-300 hover:shadow-lg hover:border-rose-700';
+                    const projectCard = document.createElement('div');
+                    // Estilo de tarjeta de proyecto con sombra, esquinas redondeadas y hover effect
+                    projectCard.className = 'bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-[1.02] transform';
                     
+                    // Imagen del proyecto (Placeholder)
+                    const image = document.createElement('img');
+                    image.src = project.imagen_url || '[https://placehold.co/400x200/99f6e4/000?text=Proyecto](https://placehold.co/400x200/99f6e4/000?text=Proyecto)';
+                    image.alt = `Imagen de proyecto ${project.titulo}`;
+                    image.className = 'w-full h-40 object-cover border-b-4 border-rose-500';
+                    projectCard.appendChild(image);
+                    
+                    // Contenido de la tarjeta
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'p-5';
+
                     const title = document.createElement('h3');
-                    title.className = 'text-xl font-semibold text-gray-900 flex items-center';
+                    title.className = 'text-xl font-bold text-rose-800 flex items-center mb-2';
                     
-                    // Icono SVG para el proyecto (añadiendo visual)
-                    // Este SVG usa un ícono de código/desarrollo
-                    const iconSvg = `<svg class="w-6 h-6 mr-3 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+                    // Icono SVG para el proyecto
+                    const iconSvg = `<svg class="w-5 h-5 mr-2 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                      </svg>`; 
                     
                     title.innerHTML = iconSvg + (project.titulo || 'Proyecto sin Título');
+                    contentDiv.appendChild(title);
 
                     const description = document.createElement('p');
-                    description.className = 'text-gray-700 mt-2';
+                    description.className = 'text-gray-700 text-sm mt-1 mb-3';
                     description.textContent = project.descripcion || 'Sin descripción.';
+                    contentDiv.appendChild(description);
                     
                     const techList = document.createElement('p');
-                    techList.className = 'text-sm text-gray-500 mt-3 font-medium';
-                    techList.innerHTML = 'Tecnologías: ' + (Array.isArray(project.tecnologias) ? project.tecnologias.join(', ') : (project.tecnologias || 'N/A'));
-                    
-                    projectDiv.appendChild(title);
-                    projectDiv.appendChild(description);
-                    projectDiv.appendChild(techList);
-                    
-                    projectsContainer.appendChild(projectDiv);
+                    techList.className = 'text-xs font-semibold text-gray-500';
+                    techList.innerHTML = 'Tecnologías: <span class="text-rose-600">' + (Array.isArray(project.tecnologias) ? project.tecnologias.join(', ') : (project.tecnologias || 'N/A')) + '</span>';
+                    contentDiv.appendChild(techList);
+
+                    projectCard.appendChild(contentDiv);
+                    projectsContainer.appendChild(projectCard);
                 });
             }
 
@@ -367,7 +392,8 @@
                 .then(renderProjects)
                 .catch(() => {
                     // Mostrar un mensaje de error si falla la carga
-                    projectsContainer.innerHTML = '<img src="" alt="">';
+                    projectsContainer.innerHTML = '<p class="text-center text-red-500 py-12">Error al cargar proyectos. Intenta recargar la página.</p>';
+                    projectsContainer.classList.remove('grid', 'md:grid-cols-2', 'lg:grid-cols-3');
                 });
 
         });
